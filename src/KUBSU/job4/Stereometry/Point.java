@@ -1,7 +1,8 @@
 package KUBSU.job4.Stereometry;
 
 public class Point {
-    private int x, y;
+    private final int x;
+    private final int y;
 
     // Конструктор для создания точки с координатами (x, y)
     public Point(int x, int y) {

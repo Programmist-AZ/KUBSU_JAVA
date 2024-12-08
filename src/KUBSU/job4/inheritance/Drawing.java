@@ -3,7 +3,7 @@ package KUBSU.job4.inheritance;
 import java.util.ArrayList;
 
 public class Drawing {
-    private ArrayList<Shape> shapes;
+    private final ArrayList<Shape> shapes;
 
     // Конструктор
     public Drawing() {

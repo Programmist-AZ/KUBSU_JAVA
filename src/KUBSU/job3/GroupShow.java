@@ -1,13 +1,12 @@
 package KUBSU.job3;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class GroupShow {
     // Поля
     private static int uniqueCounter = 1; // Для генерации уникального номера
-    private int groupId;                  // Уникальный номер группы
+    private final int groupId;                  // Уникальный номер группы
     private ArrayList<tvprogram> shows;   // Массив объектов телепередач
 
     // Конструктор по умолчанию
@@ -57,13 +56,13 @@ public class GroupShow {
     }
 
     // Удаление телепередачи по атрибуту (например, по названию)
-    public boolean removeShowByName(String name) {
-        return shows.removeIf(show -> show.getName().equalsIgnoreCase(name));
+    public void removeShowByName(String name) {
+        shows.removeIf(show -> show.getName().equalsIgnoreCase(name));
     }
 
     // Сортировка по имени (можно выбрать другой критерий)
     public void sortByName() {
-        Collections.sort(shows, Comparator.comparing(tvprogram::getName));
+        shows.sort(Comparator.comparing(tvprogram::getName));
     }
 
     // Переопределение toString() для отображения информации о группе

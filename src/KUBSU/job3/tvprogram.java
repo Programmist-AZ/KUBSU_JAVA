@@ -53,27 +53,24 @@ public class tvprogram {
 
     // Метод для получения текстового представления периодичности
     private String getPeriodTypeDescription() {
-        switch (periodType) {
-            case 1:
-                return "ежедневно";
-            case 2:
-                return "еженедельно";
-            case 3:
-                return "ежемесячно";
-            default:
-                return "неизвестно";
-        }
+        return switch (periodType) {
+            case 1 -> "ежедневно";
+            case 2 -> "еженедельно";
+            case 3 -> "ежемесячно";
+            default -> "неизвестно";
+        };
     }
 
     // Переопределение метода toString()
     @Override
     public String toString() {
         return String.format(
-                "Телепрограмма:\n" +
-                        "Ведущий: %s\n" +
-                        "Название: %s\n" +
-                        "Описание: %s\n" +
-                        "Периодичность: %s",
+                """
+                        Телепрограмма:
+                        Ведущий: %s
+                        Название: %s
+                        Описание: %s
+                        Периодичность: %s""",
                 author, name, description, getPeriodTypeDescription()
         );
     }

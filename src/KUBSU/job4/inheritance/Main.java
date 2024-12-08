@@ -1,6 +1,6 @@
 package KUBSU.job4.inheritance;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         // Создаем фигуры
         Circle circle = new Circle(5.0);
